@@ -4,17 +4,19 @@
   "description": "",
   "main": "./dist/index.js",
   "bin": {
-    "stock": "./dist/index.js"
+    "stock-cli": "./dist/index.js"
   },
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "build": "tsc -p .",
+    "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start": "ts-node src/index.ts",
+    "install-local": "npm run build && npm i -g",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Thompson",
   "license": "ISC",
   "dependencies": {
-    "clear": "^0.1.0",
     "commander": "^9.2.0",
     "papaparse": "^5.3.2"
   },
