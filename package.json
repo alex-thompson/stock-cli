@@ -1,0 +1,29 @@
+{
+  "name": "stock-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "bin": {
+    "stock": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Thompson",
+  "license": "ISC",
+  "dependencies": {
+    "clear": "^0.1.0",
+    "commander": "^9.2.0",
+    "papaparse": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/clear": "^0.1.2",
+    "@types/node": "^17.0.24",
+    "@types/papaparse": "^5.3.2",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
